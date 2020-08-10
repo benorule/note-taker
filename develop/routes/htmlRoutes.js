@@ -1,6 +1,3 @@
-// HTML Routes
-const http = require('http');
-const fs = require('fs');
 var path = require('path');
 var router = require("express").Router();
 

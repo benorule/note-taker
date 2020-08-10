@@ -1,6 +1,5 @@
-var db = require("../db/db.json");
-var router = require("express").Router();
-var store = require("../db/store");
+const router = require("express").Router();
+const store = require("../db/store");
 
 router.get("/notes", (req, res) => {
     store
@@ -18,10 +17,10 @@ router.post("/notes", (req, res) => {
 
 router.delete("/notes/:id", (req, res) => {
     store
-        .removeNote(req.params.id)
-        .then(() => res.json({ ok: true }))
-        .catch((err) => res.status(500).json(err));
-});
+      .removeNote(req.params.id)
+      .then(() => res.json({ ok: true }))
+      .catch((err) => res.status(500).json(err));
+  });
 
 module.exports = router;
 
